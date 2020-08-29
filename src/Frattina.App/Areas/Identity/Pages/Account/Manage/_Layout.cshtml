@@ -1,0 +1,21 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<div class="profile">
+    <div class="profile-header">
+        <div class="mb-4">
+            <h1 class="page-header">Gerenciar <small>atualize suas informações</small></h1>
+        </div>
+        <ul class="profile-header-tab-none nav nav-tabs">
+            <partial name="_ManageNav" />
+        </ul>
+    </div>
+</div>
+<div class="p-10 bg-white">
+    @RenderBody()
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

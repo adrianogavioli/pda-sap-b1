@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>@ViewData["Title"] - Frattina</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="~/lib/color-admin/css/app.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body>
+    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+        <div id="header" class="header navbar-default">
+            <div class="navbar-header">
+                <a asp-area="Identity" asp-page="/Account/Login" class="navbar-brand"><span class="navbar-logo"></span> <b>Frattina</b>App</a>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="content content-center">
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/color-admin/js/app.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

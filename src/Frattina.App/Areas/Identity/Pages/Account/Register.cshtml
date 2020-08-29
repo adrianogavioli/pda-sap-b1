@@ -1,0 +1,39 @@
+﻿@page
+@model RegisterModel
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Novo Usuário";
+}
+
+<vc:Summary></vc:Summary>
+<h1>@ViewData["Title"]</h1>
+<hr />
+<form method="post">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Input.UserName"></label>
+                <input asp-for="Input.UserName" class="form-control" />
+                <span asp-validation-for="Input.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary mr-3">Adicionar</button>
+        <a asp-area="Identity" asp-page="/Account/Index">Voltar</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

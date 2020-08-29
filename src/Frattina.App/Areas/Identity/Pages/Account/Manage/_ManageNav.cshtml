@@ -1,0 +1,8 @@
+﻿@inject SignInManager<IdentityUser> SignInManager
+
+<li class="nav-item text-center" style="width: 120px;">
+    <a class="nav-link rounded-0 text-white @ManageNavPages.IndexNavClass(ViewContext)" asp-page="./Index">PERFIL</a>
+</li>
+<li class="nav-item text-center" style="width: 120px;">
+    <a class="nav-link rounded-0 text-white @ManageNavPages.ChangePasswordNavClass(ViewContext)" asp-page="./ChangePassword">SENHA</a>
+</li>

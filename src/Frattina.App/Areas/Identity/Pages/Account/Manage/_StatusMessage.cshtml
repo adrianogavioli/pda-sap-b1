@@ -1,0 +1,29 @@
+﻿@model string
+
+@if (!String.IsNullOrEmpty(Model))
+{
+    if (Model.StartsWith("Error"))
+    {
+        <div class="alert alert-light fade show">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <div class="text-danger">
+                <h4><b>Ops!</b></h4>
+                <p>
+                    @Html.Raw(Model.Replace("Error", string.Empty))
+                </p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div id="msg_box" class="alert alert-light fade show">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <div class="text-success">
+                <h4><b>Sucesso!</b></h4>
+                <p>
+                    @Model
+                </p>
+            </div>
+        </div>
+    }
+}
